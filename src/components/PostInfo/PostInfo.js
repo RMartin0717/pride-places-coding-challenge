@@ -14,9 +14,9 @@ class PostInfo extends Component {
   }
 
   componentDidMount() {
-    retrieveUserData(this.state.id)
+    retrieveUserData(this.state.userId)
       .then(data => {
-        this.setState({ name: data.name, catchPrase: data.company.catchPhrase })
+        this.setState({ name: data[0].name, catchPhrase: data[0].company.catchPhrase })
       })
       .catch((error) => this.setState({ error: `Error: ${error}`}))
   }
@@ -24,8 +24,11 @@ class PostInfo extends Component {
   render() {
     return (
       <>
-        <h2>All Posts Previews</h2>
-        <p>{this.state.title}</p>
+        <h3>Post Info</h3>
+        <p>Author: {this.state.name}</p>
+        <p>Author's Catchphrase: {this.state.catchPhrase}</p>
+        <p>Post Title: {this.state.title}</p>
+        <p>{this.state.body}</p>
       </>
     )
   }
