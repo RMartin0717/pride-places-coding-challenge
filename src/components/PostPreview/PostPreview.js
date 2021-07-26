@@ -3,6 +3,8 @@ import PostInfo from '../PostInfo/PostInfo'
 import Modal from 'react-modal'
 import './PostPreview.css'
 
+
+
 const PostPreview = ({ id, userId, title, body }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false)
   return (

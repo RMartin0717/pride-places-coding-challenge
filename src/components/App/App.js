@@ -1,6 +1,9 @@
 import React from 'react'
 import AllPosts from '../AllPosts/AllPosts'
+import Modal from 'react-modal'
 import './App.css';
+
+Modal.setAppElement('#root')
 
 const App = () => {
   return (
