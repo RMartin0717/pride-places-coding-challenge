@@ -6,7 +6,13 @@ const App = () => {
   return (
     <main>
       <h1>Posts</h1>
-
+      <Route
+      exact path='/'
+      render={() => {
+        return (
+          <AllPosts
+        )
+      }}
     </main>
   )
 }
