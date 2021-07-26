@@ -9,13 +9,13 @@ const PostPreview = ({ id, userId, title, body }) => {
     <>
       <h4>{title}</h4>
       <button onClick={() => setModalIsOpen(true)}>View Modal</button>
-      <Modal isOpen={modalIsOpen}>
+      <Modal isOpen={modalIsOpen} onRequestClose={()=>setModalIsOpen(false)}>
         <PostInfo
           id={id}
           userId={userId}
           title={title}
           body={body}
-          closeModal={()=>setModalIsOpen(false)}
+          closeButton={()=>setModalIsOpen(false)}
         />
       </Modal>
     </>

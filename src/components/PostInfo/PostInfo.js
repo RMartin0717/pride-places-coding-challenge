@@ -29,7 +29,7 @@ class PostInfo extends Component {
         <p>Author's Catchphrase: {this.state.catchPhrase}</p>
         <p>Post Title: {this.state.title}</p>
         <p>{this.state.body}</p>
-        <button onClick={this.props.closeModal}>Close</button>
+        <button onClick={this.props.closeButton}>Close</button>
       </>
     )
   }
