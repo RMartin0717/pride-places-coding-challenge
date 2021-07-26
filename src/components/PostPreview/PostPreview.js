@@ -15,6 +15,7 @@ const PostPreview = ({ id, userId, title, body }) => {
           userId={userId}
           title={title}
           body={body}
+          closeModal={()=>setModalIsOpen(false)}
         />
       </Modal>
     </>
