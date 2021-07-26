@@ -10,6 +10,10 @@ class AllPosts extends Component {
     }
   }
 
+  //fetch data for all posts
+  //iterate over data and create instances of PostPreview
+  //render all the previews
+
   render() {
     return (
       <>
