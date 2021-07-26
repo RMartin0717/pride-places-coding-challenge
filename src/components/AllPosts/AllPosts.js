@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './AllPosts.css'
+import PostPreview from '../PostPreview/PostPreview'
 
 class AllPosts extends Component {
   constructor() {
@@ -12,7 +13,8 @@ class AllPosts extends Component {
   render() {
     return (
       <>
-        <h3>All Posts Previews</h3>
+        <h2>All Posts Previews</h2>
+        <PostPreview />
       </>
     )
   }

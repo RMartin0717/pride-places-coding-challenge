@@ -1,3 +1,11 @@
 import './PostPreview.css'
 
-const
+const PostPreview = () => {
+  return (
+    <>
+      <h3>Post title</h3>
+    </>
+  )
+}
+
+export default PostPreview
