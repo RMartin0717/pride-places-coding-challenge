@@ -1,9 +1,9 @@
 import './PostPreview.css'
 
-const PostPreview = () => {
+const PostPreview = ({ id, userId, title, body }) => {
   return (
     <>
-      <h3>Post title</h3>
+      <h4>{title}</h4>
     </>
   )
 }
