@@ -1,5 +1,6 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
+import AllPosts from '../AllPosts/AllPosts'
 import './App.css';
 
 const App = () => {
@@ -10,9 +11,10 @@ const App = () => {
       exact path='/'
       render={() => {
         return (
-          <AllPosts
+          <AllPosts />
         )
       }}
+      />
     </main>
   )
 }

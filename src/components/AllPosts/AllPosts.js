@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './AllPosts.css'
 
-class AllPosts extents Component {
+class AllPosts extends Component {
   constructor() {
     super();
     this.state = {
