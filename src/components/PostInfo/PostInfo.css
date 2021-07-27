@@ -23,12 +23,12 @@
 
 @media screen and (max-width: 480px) {
   .modal {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
   }
 }
 
 @media screen and (max-width: 400px) {
   .modal {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 }
