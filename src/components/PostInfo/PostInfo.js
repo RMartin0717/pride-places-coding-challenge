@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './PostInfo.css'
 import { retrieveUserData } from '../../utilities/apiCalls'
+//import React tools , related CSS files, and API calls used for this file
 
 const PostInfo = (props) => {
   const [id, setId] = useState(props.id)
