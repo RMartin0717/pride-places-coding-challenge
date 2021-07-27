@@ -30,8 +30,7 @@ const PostInfo = (props) => {
 
   return (
     <div className='modal'>
-      <h2 className='modal-text'>Post Info</h2>
-      <h3 className='modal-text'>Post Title: {title}</h3>
+      <h3 className='modal-text'>{title.toUpperCase()}</h3>
       <h4 className='modal-text'>Author: {name}</h4>
       <h5 className='modal-text catch-phrase'>Author's Catchphrase: {catchPhrase}</h5>
       <p className='modal-text body'>{body}</p>
