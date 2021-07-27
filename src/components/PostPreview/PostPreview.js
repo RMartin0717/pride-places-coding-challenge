@@ -7,6 +7,7 @@ import './PostPreview.css'
 
 const PostPreview = ({ id, userId, title, body }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false)
+  //modalIsOpen is used to control whether or not the modal is visible for each post
 
   return (
     <>
@@ -23,6 +24,13 @@ const PostPreview = ({ id, userId, title, body }) => {
       </Modal>
     </>
   )
+  //Each instance of PostPreview displays the title of the post and
+  //has its own button for opening a modal displaying PostInfo.
+  //When the modal is open, an instance of PostInfo is created,
+  //data that was passed in as props from the initial network request is passed
+  //into this instance of PostInfo.
+  //The setModalIsOpen function is also passed as props
+  //which allows the user to later click a close button in order to close the modal
 }
 
 export default PostPreview
