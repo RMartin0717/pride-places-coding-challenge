@@ -3,6 +3,11 @@
   font-family: courier;
 }
 
+html {
+  background-color: #a4bfeb;
+}
+
 .heading {
+  margin: 0;
   text-align: center;
 }

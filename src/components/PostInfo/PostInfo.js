@@ -29,14 +29,14 @@ const PostInfo = (props) => {
   //information about the author.
 
   return (
-    <>
-      <h3>Post Info</h3>
-      <p>Author: {name}</p>
-      <p>Author's Catchphrase: {catchPhrase}</p>
-      <p>Post Title: {title}</p>
-      <p>{body}</p>
-      <button onClick={props.closeButton}>Close</button>
-    </>
+    <div className='modal'>
+      <h2 className='modal-text'>Post Info</h2>
+      <h3 className='modal-text'>Post Title: {title}</h3>
+      <h4 className='modal-text'>Author: {name}</h4>
+      <h5 className='modal-text catch-phrase'>Author's Catchphrase: {catchPhrase}</h5>
+      <p className='modal-text body'>{body}</p>
+      <button onClick={props.closeButton} className='button'>Close</button>
+    </div>
   )
   //The return for PostInfo renders information passed down as props from AllPosts, into PostPreview, into PostInfo
   //pertaining to the title and body of the post

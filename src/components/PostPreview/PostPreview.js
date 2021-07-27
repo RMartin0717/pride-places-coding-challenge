@@ -14,8 +14,21 @@ const PostPreview = ({ id, userId, title, body }) => {
       <div className='title-container'>
         <h4 className='title'>{title}</h4>
       </div>
-      <button onClick={() => setModalIsOpen(true)}>View Modal</button>
-      <Modal isOpen={modalIsOpen} onRequestClose={()=>setModalIsOpen(false)}>
+      <button onClick={() => setModalIsOpen(true)} className='button'>View Details</button>
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={()=>setModalIsOpen(false)}
+        style={
+          {
+            overlay: {
+              backgroundColor: 'rgba(64, 75, 92, 0.6)'
+            },
+            content: {
+              border: '1px solid black'
+            }
+          }
+        }
+      >
         <PostInfo
           id={id}
           userId={userId}
