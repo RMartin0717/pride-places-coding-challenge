@@ -12,6 +12,8 @@
 @media screen and (max-width: 480px) {
   .all-posts {
     grid-template-columns: 1fr 1fr;
+
+    font-size: 1.1rem;
   }
 }
 
@@ -20,5 +22,7 @@
   .all-posts {
     display: flex;
     flex-direction: column;
+
+    font-size: 1.25rem;
   }
 }
