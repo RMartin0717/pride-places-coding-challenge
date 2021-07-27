@@ -4,10 +4,9 @@ import { retrieveUserData } from '../../utilities/apiCalls'
 //import React tools , related CSS files, and API calls used for this file
 
 const PostInfo = (props) => {
-  const [id, setId] = useState(props.id)
-  const [userId, setUserId] = useState(props.userId)
-  const [title, setTitle] = useState(props.title)
-  const [body, setBody] = useState(props.body)
+  const [userId] = useState(props.userId)
+  const [title] = useState(props.title)
+  const [body] = useState(props.body)
   const [name, setName] = useState('')
   const [catchPhrase, setCatchPhrase] = useState('')
   const [error, setError] = useState('')
