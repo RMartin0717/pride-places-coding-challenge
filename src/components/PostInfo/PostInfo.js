@@ -1,38 +1,40 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 import './PostInfo.css'
 import { retrieveUserData } from '../../utilities/apiCalls'
 
-class PostInfo extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      id: props.id,
-      userId: props.userId,
-      title: props.title,
-      body: props.body
-    }
-  }
+const PostInfo = (props) => {
+  const [id, setId] = useState(props.id)
+  const [userId, setUserId] = useState(props.userId)
+  const [title, setTitle] = useState(props.title)
+  const [body, setBody] = useState(props.body)
+  const [name, setName] = useState('')
+  const [catchPhrase, setCatchPhrase] = useState('')
+  const [error, setError] = useState('')
 
-  componentDidMount() {
-    retrieveUserData(this.state.userId)
+
+  useEffect(() => {
+    let mounted = true;
+    retrieveUserData(userId)
       .then(data => {
-        this.setState({ name: data[0].name, catchPhrase: data[0].company.catchPhrase })
+        if(mounted) {
+          setName(data[0].name)
+          setCatchPhrase(data[0].company.catchPhrase)
+        }
       })
-      .catch((error) => this.setState({ error: `Error: ${error}`}))
-  }
+      .catch((error) => setError(`Error: ${error}`))
+    return () => mounted = false
+  })
 
-  render() {
-    return (
-      <>
-        <h3>Post Info</h3>
-        <p>Author: {this.state.name}</p>
-        <p>Author's Catchphrase: {this.state.catchPhrase}</p>
-        <p>Post Title: {this.state.title}</p>
-        <p>{this.state.body}</p>
-        <button onClick={this.props.closeButton}>Close</button>
-      </>
-    )
-  }
+  return (
+    <>
+      <h3>Post Info</h3>
+      <p>Author: {name}</p>
+      <p>Author's Catchphrase: {catchPhrase}</p>
+      <p>Post Title: {title}</p>
+      <p>{body}</p>
+      <button onClick={props.closeButton}>Close</button>
+    </>
+  )
 }
 
 export default PostInfo

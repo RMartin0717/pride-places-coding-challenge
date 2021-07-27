@@ -19,7 +19,7 @@ const AllPosts = () => {
       })
       .catch((error) => setError(`Error: ${error}`))
     return () => mounted = false
-  }, [setPosts])
+  })
 
   const allPosts = (data) => {
     const mappedPosts = data.map(post => {

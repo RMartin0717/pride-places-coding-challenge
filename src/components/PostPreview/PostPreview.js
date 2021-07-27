@@ -7,6 +7,7 @@ import './PostPreview.css'
 
 const PostPreview = ({ id, userId, title, body }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false)
+  
   return (
     <>
       <h4>{title}</h4>
