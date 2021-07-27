@@ -47,8 +47,8 @@ const AllPosts = () => {
 
   return (
     <>
-      <h2>All Posts Previews</h2>
-      <section>{allPosts(posts)}</section>
+      <h2 className='heading'>All Posts Previews</h2>
+      <section className='all-posts'>{allPosts(posts)}</section>
     </>
   )
   //in this return, JSX is used to display the section containing all of the posts

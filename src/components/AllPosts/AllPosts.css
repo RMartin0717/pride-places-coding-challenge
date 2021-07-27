@@ -1,0 +1,24 @@
+.all-posts {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 770px) {
+  .all-posts {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .all-posts {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+@media screen and (max-width: 400px) {
+  .all-posts {
+    display: flex;
+    flex-direction: column;
+  }
+}

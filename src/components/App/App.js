@@ -8,7 +8,7 @@ Modal.setAppElement('#root')
 const App = () => {
   return (
     <main>
-      <h1>Posts</h1>
+      <h1 className='heading'>Posts</h1>
       <AllPosts />
     </main>
   )
