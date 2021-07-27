@@ -1,25 +1,27 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 import './AllPosts.css'
 import PostPreview from '../PostPreview/PostPreview'
 import { retrievePostsData } from '../../utilities/apiCalls'
 
-class AllPosts extends Component {
-  constructor() {
-    super();
-    this.state = {
-      posts: []
-    }
-  }
 
-  componentDidMount() {
+
+const AllPosts = () => {
+  const [posts, setPosts] = useState([])
+  const [error, setError] = useState('')
+
+  useEffect(() => {
+    let mounted = true;
     retrievePostsData()
       .then(data => {
-        this.setState({ posts: data })
+        if(mounted) {
+          setPosts(data)
+        }
       })
-      .catch((error) => this.setState({ error: `Error: ${error}`}))
-  }
+      .catch((error) => setError(`Error: ${error}`))
+    return () => mounted = false
+  }, [setPosts])
 
-  allPosts(data) {
+  const allPosts = (data) => {
     const mappedPosts = data.map(post => {
       return (
         <PostPreview
@@ -34,14 +36,13 @@ class AllPosts extends Component {
     return mappedPosts
   }
 
-  render() {
-    return (
-      <>
-        <h2>All Posts Previews</h2>
-        {this.allPosts(this.state.posts)}
-      </>
-    )
-  }
+  return (
+    <>
+      <h2>All Posts Previews</h2>
+      {allPosts(posts)}
+    </>
+  )
+
 }
 
 export default AllPosts
