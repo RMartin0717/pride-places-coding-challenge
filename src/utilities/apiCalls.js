@@ -9,6 +9,10 @@ const retrievePostsData = () => {
     })
 }
 
+//retrievePostsData is the GET request to all posts
+//This is called on mount in AllPosts.js to store data for all of the posts in state
+//to be rendered to the page
+
 const retrieveUserData = (id) => {
   return fetch(`https://jsonplaceholder.typicode.com/users?id=${id}`)
     .then(response => {
@@ -19,5 +23,9 @@ const retrieveUserData = (id) => {
       }
     })
 }
+
+//retrieveUserData is the GET request to retrieve data for a specific user
+//It is called in PostInfo ONLY when a user clicks on a specific title
+//to obtain the author's name and catchphrase for only that post
 
 export { retrievePostsData, retrieveUserData }
