@@ -13,6 +13,9 @@ This project was a take home code challenge for an internship at Pride Places. I
 
 ### Notable features
  - Responsive design for a user-friendly experience on a variety of screen-sizes
+ - 100% Lighthouse Accessibility audit
+ - 100% Lighthouse Best Practices audit
+ - 100% Lighthouse SEO audit
 
 ### Deploy Link
 
@@ -28,7 +31,9 @@ This project was a take home code challenge for an internship at Pride Places. I
 
 ## Walkthrough
 
- -
+ - When the user arrives on the page, a page heading is visiable as well as a display featuring cards containing post titles
+ - When a user clicks on any post title card, a modal pops up over the main content of the page and details for the post are displayed
+ - When the user clicks the close button or outside of the modal, the modal closes
 
 Desktop Home Page
 
@@ -52,15 +57,6 @@ Desktop Post Modal
 Mobile Post Modal
 
 <img src="./src/assets/images/mobile-modal.png" alt="mobile modal view" width="400" height="auto" />
-
-
-### Project Progression
-
-
-
-### Reflection
-
-
 
 ## Author
 <table>
