@@ -18,7 +18,7 @@ This project was a take home code challenge for an internship at Pride Places. I
  - 100% Lighthouse SEO audit
 
 ### Deploy Link
-
+pride-places-code-challenge.surge.sh
 
 
 ## Installation
