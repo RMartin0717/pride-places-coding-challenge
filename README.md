@@ -8,12 +8,11 @@
 * [Technologies](#technologies)
 
 ## Description
-
+This project was a take home code challenge for an internship at Pride Places. It required use of React, vanilla js, or Next.js to build a front end app to display post titles from a given API. When any post title is clicked, a modal opens up to display the author's name, author's catchPhrase, post title, post body, and a close button. The modal's close button closes the modal and clicking outside of the modal also closes the modal.
 
 
 ### Notable features
-
- -
+ - Responsive design for a user-friendly experience on a variety of screen-sizes
 
 ### Deploy Link
 
