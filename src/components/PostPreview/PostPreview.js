@@ -12,7 +12,7 @@ const PostPreview = ({ id, userId, title, body }) => {
   return (
     <article className='post-preview'>
       <div className='title-container'>
-        <h4 className='title'>{title}</h4>
+        <h3 className='title'>{title}</h3>
       </div>
       <button onClick={() => setModalIsOpen(true)} className='button'>View Details</button>
       <Modal

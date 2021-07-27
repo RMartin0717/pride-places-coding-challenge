@@ -9,6 +9,7 @@
   border: 1px solid black;
   padding: 10px;
   height: 10rem;
+  min-height: 200px;
 
   border-radius: 4px;
 
@@ -21,9 +22,15 @@
   height: 100%;
 }
 
+@media screen and (max-width: 600px) {
+  .post-preview {
+    height: 30vh;
+  }
+}
+
 @media screen and (max-width: 400px) {
   .post-preview {
-    height: 40vh;
-    min-width: 220px;
+    height: 35vh;
+    min-width: 300px;
   }
 }
