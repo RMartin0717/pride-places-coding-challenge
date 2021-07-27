@@ -4,10 +4,9 @@ import { retrieveUserData } from '../../utilities/apiCalls'
 //import React tools , related CSS files, and API calls used for this file
 
 const PostInfo = (props) => {
-  const [id, setId] = useState(props.id)
-  const [userId, setUserId] = useState(props.userId)
-  const [title, setTitle] = useState(props.title)
-  const [body, setBody] = useState(props.body)
+  const [userId] = useState(props.userId)
+  const [title] = useState(props.title)
+  const [body] = useState(props.body)
   const [name, setName] = useState('')
   const [catchPhrase, setCatchPhrase] = useState('')
   const [error, setError] = useState('')
@@ -30,14 +29,13 @@ const PostInfo = (props) => {
   //information about the author.
 
   return (
-    <>
-      <h3>Post Info</h3>
-      <p>Author: {name}</p>
-      <p>Author's Catchphrase: {catchPhrase}</p>
-      <p>Post Title: {title}</p>
-      <p>{body}</p>
-      <button onClick={props.closeButton}>Close</button>
-    </>
+    <div className='modal'>
+      <h3 className='modal-text'>{title.toUpperCase()}</h3>
+      <h4 className='modal-text'>Author: {name}</h4>
+      <h5 className='modal-text catch-phrase'>Author's Catchphrase: {catchPhrase}</h5>
+      <p className='modal-text body'>{body}</p>
+      <button onClick={props.closeButton} className='button'>Close</button>
+    </div>
   )
   //The return for PostInfo renders information passed down as props from AllPosts, into PostPreview, into PostInfo
   //pertaining to the title and body of the post

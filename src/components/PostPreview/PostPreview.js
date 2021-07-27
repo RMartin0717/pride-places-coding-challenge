@@ -10,10 +10,25 @@ const PostPreview = ({ id, userId, title, body }) => {
   //modalIsOpen is used to control whether or not the modal is visible for each post
 
   return (
-    <>
-      <h4>{title}</h4>
-      <button onClick={() => setModalIsOpen(true)}>View Modal</button>
-      <Modal isOpen={modalIsOpen} onRequestClose={()=>setModalIsOpen(false)}>
+    <article className='post-preview'>
+      <div className='title-container'>
+        <h4 className='title'>{title}</h4>
+      </div>
+      <button onClick={() => setModalIsOpen(true)} className='button'>View Details</button>
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={()=>setModalIsOpen(false)}
+        style={
+          {
+            overlay: {
+              backgroundColor: 'rgba(64, 75, 92, 0.6)'
+            },
+            content: {
+              border: '1px solid black'
+            }
+          }
+        }
+      >
         <PostInfo
           id={id}
           userId={userId}
@@ -22,7 +37,7 @@ const PostPreview = ({ id, userId, title, body }) => {
           closeButton={()=>setModalIsOpen(false)}
         />
       </Modal>
-    </>
+    </article>
   )
   //Each instance of PostPreview displays the title of the post and
   //has its own button for opening a modal displaying PostInfo.

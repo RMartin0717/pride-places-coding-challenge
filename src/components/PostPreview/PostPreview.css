@@ -1,0 +1,29 @@
+.post-preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+
+  margin: 5px;
+  border: 1px solid black;
+  padding: 10px;
+  height: 10rem;
+
+  border-radius: 4px;
+
+  background-color: white;
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+@media screen and (max-width: 400px) {
+  .post-preview {
+    height: 40vh;
+    min-width: 220px;
+  }
+}
