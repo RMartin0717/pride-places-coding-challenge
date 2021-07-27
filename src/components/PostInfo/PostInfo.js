@@ -25,6 +25,9 @@ const PostInfo = (props) => {
       .catch((error) => setError(`Error: ${error}`))
     return () => mounted = false
   })
+  //When a PostPreview is clicked and props from that post are passed in for this new instance
+  //of PostInfo, the userId for the post is taken in order to make a GET request to obtain more
+  //information about the author.
 
   return (
     <>
@@ -36,6 +39,10 @@ const PostInfo = (props) => {
       <button onClick={props.closeButton}>Close</button>
     </>
   )
+  //The return for PostInfo renders information passed down as props from AllPosts, into PostPreview, into PostInfo
+  //pertaining to the title and body of the post
+  //Data stored in state from the new network request (pertaining to author and author's catchphrase) is also displayed
+  //A button for closing the modal is rendered with functionality passed in as props from PostPreview
 }
 
 export default PostInfo
